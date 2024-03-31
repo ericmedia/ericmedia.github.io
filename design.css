@@ -17,7 +17,6 @@ hr{
   grid-template-columns: repeat(3, 1fr); /* Creates 3 columns with equal width */
 }
 
-
 .container{
   width:450px;
   height: 804px;
@@ -31,12 +30,34 @@ hr{
 
 .navbar{
   position: fixed;
+  display: flex;
+  padding: 10px;
+  list-style: none;
   top: 0px;
   width: 100%;
   height: 40px;
-  background-color: white !important;
+  background-color: darkgray !important;
   z-index: 1;
 }
+
+@media only screen and (max-width:600px){
+  .navbar{
+    font-size: smaller;
+    padding: 0px;
+  }
+  .navbar button{
+    font-size: smaller;
+  }
+}
+
+.navbar a{
+  color: white;
+}
+
+li{
+  padding: 10px;
+}
+
 .container:hover .overlay{
   opacity: 1;
   transform: scale(1);
